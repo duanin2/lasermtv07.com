@@ -17,5 +17,11 @@ function getRepos(){
 	}
 	return $d;
 }
-
+$v=file_get_contents("https://github.com/lasermtv07");
+$b=false;
+foreach(explode("\n",$v) as $i){
+	if(preg_match("/<ol class=/",$i)) $b=true;
+	echo ($b) ? "true\n" : "false\n";
+	if($b) echo "$i\n";
+}
 ?>

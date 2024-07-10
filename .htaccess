@@ -1,0 +1,3 @@
+<FilesMatch "login.txt">
+Require all denied
+</FilesMatch>

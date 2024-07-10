@@ -9,7 +9,7 @@ include "com.php";
 </head>
 <body>
 <?php menu(); ?>
-<menu>
+<main>
 	<h1>links</h1>
 	<h3>github</h3>
 	<ul>
@@ -34,6 +34,6 @@ include "com.php";
 	<li><b><a href=https://www.youtube.com/@AByteofCode >A Byte of Code</a></b> - cool programming youtuber</li>
 </ul>
 	<?php footer(); ?>
-</menu>
+</main>
 </body>
 </html>

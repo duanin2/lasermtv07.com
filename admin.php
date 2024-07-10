@@ -45,6 +45,7 @@ if($_GET["gen"]=="true"){
 		$nn=name2filename($i["n"]);
 		$an="<!DOCTYPE HTML>\n<html>\n<head>\n<meta charset=UTF-8 ><title>".$i["n"]." :: lasermtv07</title>\n<link rel=stylesheet href=../style.css >\n</head>\n<body>\n";
 		$an.=file_get_contents("menu.html");
+		$an.="\n<script src=../theme.js></script>\n";
 		$an.="<main>\n<h1>  ".$i["n"]."</h1>\n  ".$i["a"]."\n";
 		$an.=str_replace("img/blinkies","../img/blinkies",file_get_contents("footer.html"));
 		$an.="\n</main></body></html>";

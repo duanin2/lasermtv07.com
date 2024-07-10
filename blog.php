@@ -10,7 +10,7 @@ include "com.php";
 <body>
 <?php menu(); ?>
 <main>
-	<h1>lorem ipsum</h1>
+	<h1>blog</h1>
 	<p>Professional blog of lasermtv. <a href=login.php >Log in</a> to administration.</p>
 <?php
 foreach(scandir("posts") as $i){

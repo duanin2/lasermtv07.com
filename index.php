@@ -5,7 +5,7 @@ include "com.php"
 <html>
 <head>
 	<title>laserm :: home</title>
-	<link rel=stylesheet href= style.css />
+	<link rel=stylesheet href=style.css />
 </head>
 <body>
 <?php menu();?>

@@ -2,9 +2,17 @@
 <html>
 <head>
 	<title>files</title>
+	<style>
+	main {
+		width:80%;
+		margin-right:auto;
+		margin-left:auto;
+	}
+	</style>
 </head>
 <body>
 <a href="admin.php" >&lt;&lt;back to admin</a>
+<main>
 	<h1>file management</h1>
 <?php
 session_start();
@@ -44,5 +52,6 @@ foreach(scandir("files") as $i){
 	}
 }
 ?>
+</main>
 </body>
 <html>

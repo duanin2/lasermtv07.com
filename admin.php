@@ -1,4 +1,5 @@
 <?php
+include "rss.php";
 function name2filename($s){
 	$o="";
 	$t=explode(" ",$s);
@@ -17,8 +18,16 @@ function name2filename($s){
 <html>
 <head>
 	<title>laserm :: admin</title>
+	<style>
+	main {
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	</style>
 </head>
 <body>
+<main>
 <h1>admin panel</h1>
 <?php
 session_start();
@@ -33,7 +42,7 @@ if(!isset($_SESSION["login"])){
 <b><a href=newpost.php >New Post!</a> - <a href=admin.php?d=true />Log out</a>
  - <a href=files.php>Manage Files</a> - <a href=admin.php?gen=true >Generate static HTML</a>
 </b>
-<br><br>
+<hr />
 <?php
 $t=unserialize(file_get_contents("articles.txt"));
 if($_GET["gen"]=="true"){
@@ -43,6 +52,7 @@ if($_GET["gen"]=="true"){
 	}
 	foreach($t as $i){
 		$nn=name2filename($i["n"]);
+		$nn=$i["i"]."-".$nn;
 		$an="<!DOCTYPE HTML>\n<html>\n<head>\n<meta charset=UTF-8 ><title>".$i["n"]." :: lasermtv07</title>\n<link rel=stylesheet href=../style.css >\n</head>\n<body>\n";
 		$an.=file_get_contents("menu.html");
 		$an.="\n<script src=../theme.js></script>\n";
@@ -51,6 +61,7 @@ if($_GET["gen"]=="true"){
 		$an.="\n</main></body></html>";
 		file_put_contents("posts/$nn",$an);
 	}
+	genRSS();
 	header("location:admin.php");
 	
 }
@@ -68,5 +79,6 @@ foreach($t as $i){
 	echo " - <a href=admin.php?del=".$i["i"]." >Delete</a><br>";
 	}
 ?>
+</main>
 </body>
 </html>

@@ -2,8 +2,15 @@
 <html>
 <head>
 	<title> admin login</title>
+	<style>
+	main {
+		width:80%;
+		margin-left:auto;
+	}
+	</style>
 </head>
 <body>
+<main>
 	<h1>Admin login</h1>
 	<form method=POST >
 		<b>Login:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <input type=text name=login ><br>
@@ -27,5 +34,6 @@ if(isset($_POST["s"])){
 	}
 }
 ?>
+</main>
 </body>
 </html>

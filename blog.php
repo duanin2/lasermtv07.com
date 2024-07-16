@@ -22,7 +22,7 @@ include "com.php";
 <main>
 
 	<h1>
-		<img class=rss src=img/rss.png  />
+		<a href=rss.xml><img class=rss src=img/rss.png  /></a>
 		blog
 	</h1>
 	<p>Professional blog of lasermtv. <a href=login.php >Log in</a> to administration.</p>

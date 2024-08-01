@@ -28,6 +28,7 @@ I&nbsp;guess it's good to have it here
 <li><b><a href=https://spacehey.com/profile?id=2559698 >spacehey</a></b></li>
 <li><b><a href=https://www.youtube.com/@laserm6113 >YouTube</a></b> - <i>inactive</i></li>
 <li><b><a href=https://lasermtv.itch.io/ >itch.io</a></b></li>
+<li><b>email:</b> <a href=mailto:lasermtv07@volny.cz>lasermtv07@volny.cz</a></li>
 </ul>
 <h3>My interests</h3>
 <p>
@@ -59,6 +60,19 @@ Here, I will list the software I use. It is good to mention that I am a <b>distr
 <li><b>Text editor:</b> Vim</li>
 </ul>
 The dotfiles can be found on my <a href=https://github.com/lasermtv07/dotfiles >github</a>.</p>
+<h3>interests</h3>
+<style>
+.int {
+	width:80%;
+}
+.int h4 {
+	margin-top:0;
+}
+</style>
+<?php
+printInterests();
+?>
+<br>
 <?php footer(); ?>
 </main>
 </body>

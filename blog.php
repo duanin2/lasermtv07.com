@@ -36,7 +36,7 @@ foreach($s as $i){
 ksort($n);
 $m=-1;
 $y=-1;
-foreach($n as $i){
+foreach(array_reverse($n) as $i){
 	$o=$i;
 	if($i!="." && $i!=".."){
 		$i=explode(".",$i)[0];

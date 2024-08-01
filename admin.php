@@ -27,6 +27,7 @@ function name2filename($s){
 	</style>
 </head>
 <body>
+<a href=index.php >&lt;&lt; back to home</a>
 <main>
 <h1>admin panel</h1>
 <?php
@@ -40,7 +41,7 @@ if(!isset($_SESSION["login"])){
 }
 ?>
 <b><a href=newpost.php >New Post!</a> - <a href=admin.php?d=true />Log out</a>
- - <a href=files.php>Manage Files</a> - <a href=admin.php?gen=true >Generate static HTML</a>
+ - <a href=files.php>Manage Files</a> - <a href=admin.php?gen=true >Generate static HTML</a> - <a href=interests.php >Change interests</a>
 </b>
 <hr />
 <?php

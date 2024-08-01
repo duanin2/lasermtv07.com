@@ -10,25 +10,22 @@
 		}
 		.menu {
 			position:sticky;
-			top:1px;
-			margin-top:20px !important;
-		}
-		.menu .l {
-			padding-left: 20px;
-			padding-right: 13px;
-			border: 2px solid var(--text);
-			background-color: var(--body);
+			top:calc( 1em + 6px );
 		}
 		.menu .n {
 			position: relative;
-			top:-2px;
+			top:-1em;
 			float:right;
 			color:var(--body);
 			background-color:var(--text);
 			display:inline-block;
-			width: calc( 100% - 1em - 45px );
+			width: 100%;
 			padding-bottom: 4px;
-			padding-left: 15px;
+			padding-left: 25px;
+			margin-left:10px !important;
+		}
+		.menu .l {
+			color:var(--body) !important;
 		}
 		.menu .t {
 			color:var(--body)
@@ -37,6 +34,9 @@
 		}
 		.menu .m {
 			color:var(--body) !important;
+		}
+		.menu {
+			margin-top:0 !important;
 		}
 		main {
 			width:80%;
@@ -66,35 +66,27 @@
 
 		}
 		@media (max-width:560px){
-			.menu {
-				position:sticky;
-				top: 20px;
+			.menu .l,.t {
+				display:none;
 			}
-			.menu .n {
-				background-color:var(--text);
-				padding-left: 19px !important;
-				padding-bottom: 0px !important;
-				top:-23px !important;
+			.menu .m {
+				font-size:1em !important;
 			}
-			.menu .l {
-				border:none !important;
-				margin-top: 0 !important;
-				position: absolute;
-				top: -23px;
+			.menu a{
+				display:block;
+				margin-left:10px;
 			}
-			.menu .t {
-				color:var(--text);
-				background-color:var(--text);
-				width: 100% !important;
-			}
-			.menu a {
-				display:block !important;
-				width:100% !important;
-				padding-left:0 !important;
+			.menu #switch {
 				float:left !important;
-				position: relative !important;
-				left:-69px;
-				background-color:var(--text);
+			}
+			.menu {
+				position:fixed;
+				top: calc( -1em );
+				margin-top:0;
+				width:100%;
+			}
+			main {
+				margin-top:11em;
 			}
 		}
 	hr {
@@ -110,4 +102,3 @@
 	li {
 		list-style-type: "> ";
 	}
-

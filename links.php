@@ -31,7 +31,15 @@ include "com.php";
 	<li><b><a href=https://www.youtube.com/@naximek >naximek</a></b> - a friend of mine and a Minecraft youtuber</li>
 	<li><b><a href=https://www.youtube.com/@tenkaiserka >tenkaiserka</a></b> - a Minecraft youtuber</li>
 	<li><b><a href=https://www.youtube.com/@Truttle1 >Truttle1</a></b> - a cool esolang youtuber</li>
+</ul>
+<h3>educational channels</h3>
+<ul>
+	<li><b><a href=https://www.youtube.com/@3blue1brown >3blue1brown</a></b> - famous for explaining math and comp sci very clearly</li>
+	<li><b><a href=https://www.youtube.com/@statquest >StatQuest</a></b> - a channel focused on explaining statistics and ML very clearly</li>
+	<li><b><a href=https://www.youtube.com/@Fireship >Fireship</a></b> - a channel dedicated to programming</li>
 	<li><b><a href=https://www.youtube.com/@AByteofCode >A Byte of Code</a></b> - cool programming youtuber</li>
+	<li><b><a href=https://www.youtube.com/@Reducible >Reducible</a></b> - a channel focused on DSA and comp sci</li>
+	<li><b><a href=https://www.youtube.com/@BenEater >Ben Eater</a></b> - a cool electrical engineering channel</li>
 </ul>
 	<?php footer(); ?>
 </main>

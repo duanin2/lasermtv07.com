@@ -86,8 +86,13 @@
 				width:100%;
 			}
 			main {
-				margin-top:11em;
+				margin-top:13em;
 			}
+			.blinkies img {
+				display:block;
+				padding:2px;
+			}
+
 		}
 	hr {
 		color: var(--text);

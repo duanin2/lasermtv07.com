@@ -74,6 +74,7 @@ printInterests();
 ?>
 <br>
 <?php footer(); ?>
+<script src=int_table.js ></script>
 </main>
 </body>
 </html>

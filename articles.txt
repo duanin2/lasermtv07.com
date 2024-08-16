@@ -1,8 +1,8 @@
-a:2:{i:0;a:3:{s:1:"i";i:1720273435;s:1:"n";s:6:"nya :3";s:1:"a";s:172:"<h3><strong>This is a testing post</strong></h3>
+a:3:{i:0;a:3:{s:1:"i";i:1720273435;s:1:"n";s:6:"nya :3";s:1:"a";s:241:"<h3><strong>This is a testing post</strong></h3>
 <p>nya uwu :3</p>
 <h3>Image test</h3>
-<p><img src="../files/fbi-test.png" width="335" height="256" /></p>
-<p>&nbsp;</p>";}i:1;a:3:{s:1:"i";i:1720315351;s:1:"n";s:36:"Writing a website in under 24 hours!";s:1:"a";s:1659:"<p>Hi!</p>
+<p><img src="../../../../../../../../../files/fbi-test.png" width="335" height="256" /></p>
+<p> </p>dasddsadasdasd fadsf adsf w34 es2assad asrd q4w r";}i:1;a:3:{s:1:"i";i:1720315351;s:1:"n";s:36:"Writing a website in under 24 hours!";s:1:"a";s:1659:"<p>Hi!</p>
 <p>Okay, I'll admit, this is a <em>bit </em>of a clickbait, since I started this project at about 23 (11PM) the day after yesterday and currently it's about 3(AM) well.. today, but still, I worked less than 24 hours net time on this, and this website features a working static</p>
 <p>site generator (in about 12 lines of code):</p>
 <p><img src="../files/code1.png" alt="" width="271" height="156" /></p>
@@ -13,4 +13,4 @@ a:2:{i:0;a:3:{s:1:"i";i:1720273435;s:1:"n";s:6:"nya :3";s:1:"a";s:172:"<h3><stro
 <h3 id="mcetoc_1i25chs9r2">Is this all?</h3>
 <p>Well, no. Unless I decide to be a lazy loser (like I am), I plan on adding stuff like dark mode, RSS, polishing it a <em>bit</em>, etc. For now, it's only because it's better than my previous website:</p>
 <p><img src="../files/2024-07-07_03-19.png" alt="" width="626" height="301" /></p>
-<p>The <a href="https://github.com/lasermtv07/lasermtv07.com">GitHub </a>is public, have fun.</p>";}}
+<p>The <a href="https://github.com/lasermtv07/lasermtv07.com">GitHub </a>is public, have fun.</p>";}i:2;a:3:{s:1:"i";i:1723832092;s:1:"n";s:3:"uwu";s:1:"a";s:7:"saasdaa";}}

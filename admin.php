@@ -54,12 +54,14 @@ if($_GET["gen"]=="true"){
 	foreach($t as $i){
 		$nn=name2filename($i["n"]);
 		$nn=$i["i"]."-".$nn;
-		$an="<!DOCTYPE HTML>\n<html>\n<head>\n<meta charset=UTF-8 ><title>".$i["n"]." :: lasermtv07</title>\n<link rel=stylesheet href=../style.css >\n</head>\n<body>\n";
-		$an.=file_get_contents("menu.html");
-		$an.="\n<script src=../theme.js></script>\n";
-		$an.="<main>\n<h1>  ".$i["n"]."</h1>\n  ".$i["a"]."\n";
-		$an.=str_replace("img/blinkies","../img/blinkies",file_get_contents("footer.html"));
-		$an.="\n</main></body></html>";
+		$an=file_get_contents('sample.html');
+		$an=str_replace('<--{name}-->',$i["n"],$an);
+		$an=str_replace('<--{menu}-->',file_get_contents('menu.html'),$an);
+		$an=str_replace('<--{time}-->',date("d/m/Y H:m",$i["i"]+7200),$an);
+		$an=str_replace('<--{content}-->',$i["a"],$an);
+		$ft=str_replace("img/blinkies","../img/blinkies",file_get_contents("footer.html"));
+		$an=str_replace('<--{footer}-->',$ft,$an);
+
 		file_put_contents("posts/$nn",$an);
 	}
 	genRSS();
@@ -77,7 +79,7 @@ if(isset($_GET["del"])){
 }
 foreach($t as $i){
 	echo "&gt; <a href=newpost.php?i=".$i["i"]." ><b style=font-size:1.4em>".$i['n']."</b></a>";
-	echo " - <a href=admin.php?del=".$i["i"]." >Delete</a><br>";
+	echo " - <a href=admin.php?del=".$i["i"]." >Delete</a> <a target=_new href=preview.php?i=".$i["i"]." >Preview page</a><br>";
 	}
 ?>
 </main>

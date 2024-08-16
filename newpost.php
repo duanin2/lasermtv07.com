@@ -32,6 +32,9 @@ value="<?php if(!$unique) echo $t[$artin]["n"];?>"
 <?php if(!$unique) echo $t[$artin]["a"];?>
 </textarea>
 <br><input type=submit name=s >
+<a href=preview.php?i=<?php echo $_GET["i"]; ?> target=_new >
+ Preview
+</a>
 </form>
 <?php
 	if(isset($_POST["s"])){
@@ -53,6 +56,8 @@ value="<?php if(!$unique) echo $t[$artin]["n"];?>"
 		$s=serialize($t);
 		file_put_contents("articles.txt",$s);
 		if($unique) header("location:newpost.php?i=$id");
+		else header("location:newpost.php?i=".$_GET["i"]);
+
 	}
 ?>
 </main>

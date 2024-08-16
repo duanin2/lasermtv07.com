@@ -49,6 +49,14 @@
 	.left {
 		float:left;
 	}
+	.int {
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.int .left {
+		width:50%;
+	}
+
 		@media (max-width:750px){
 			main {
 				width:95% !important;
@@ -92,6 +100,9 @@
 				display:block;
 				padding:2px;
 			}
+			.int {
+				display:block;
+			}
 
 		}
 	hr {
@@ -107,3 +118,4 @@
 	li {
 		list-style-type: "> ";
 	}
+

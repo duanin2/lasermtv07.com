@@ -32,11 +32,11 @@ I&nbsp;guess it's good to have it here
 </ul>
 <h3>My interests</h3>
 <p>
-Okay, uhh.. this is where I am supposed to say stuff i am interested in, I am good at. Which is hard coz Im kinda not good at anything. I will, however, list some stuff I am less bad at.
+I'm not very focused; sorta flying from one hyperfixation to another. However, here, I'll list some stuffs that I'm persistently interested in:
 <ul>
 	<li><b>Backend web development</b> - well, no surprises here, I am <i>"majoring"</i> in it.</li>
 	<li><b>Esoteric programming languages</b> - one of my weirder obessions in CS. I particularly like the <a href=https://en.wikipedia.org/wiki/Brainfuck >brainfuck</a>. I have also made an <a href=https://github.com/lasermtv07/caesarlang >esolang</a> on my own.</li>
-<li><b>Application of mathematics to CS</b> - While I dont consider myself very good at math, I find the idea of how such abstract concepts can be applied in real life with computers fascinating. <a href=https://en.wikipedia.org/wiki/Automata_theory >Automata</a> theory in particular is beautiful &lt;3</li>
+<li><b>Theory of automatas and grammars</b> -  Area of math and comp sci studying the propertioes of automatons, formal languages and formal grammars. I'm still learning, but I'm trying ;). <a href=https://en.wikipedia.org/wiki/Automata_theory >Link to Wikipedia</a> if someone is curious</li>
 <li><b>Linux/Unix</b> - I am a die-hard Linux user. This website is hosted on linux (though that is not <a href=https://w3techs.com/technologies/details/os-linux >surprising</a>) and I daily drive linux on all my devices.</li>
 </ul>
 </p>
@@ -61,20 +61,11 @@ Here, I will list the software I use. It is good to mention that I am a <b>distr
 </ul>
 The dotfiles can be found on my <a href=https://github.com/lasermtv07/dotfiles >github</a>.</p>
 <h3>interests</h3>
-<style>
-.int {
-	width:80%;
-}
-.int h4 {
-	margin-top:0;
-}
-</style>
 <?php
 printInterests();
 ?>
 <br>
 <?php footer(); ?>
-<script src=int_table.js ></script>
 </main>
 </body>
 </html>

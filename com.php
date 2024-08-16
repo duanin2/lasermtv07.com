@@ -6,19 +6,18 @@ function footer(){
 	echo file_get_contents("footer.html");
 }
 function printInterests(){
+	echo "<div class=int>";
 	$a=file_get_contents("interests.txt");
 	$b=explode(";",explode("|",$a)[0]);
 	$c=explode(";",explode("|",$a)[1]);
-	$o="<table class=int >\n<tr><td><h4>books</h3></td><td><h4>music</h4></td></tr>\n";
-	for($i=0;$i<((sizeof($c)>sizeof($b)?sizeof($c):sizeof($b)));$i++){
-		$o.="<tr>";
-		if(sizeof($b)>$i) $o.="<td>".$b[$i]."</td>";
-		else $o.="<td></td>";
-		if(sizeof($c)>$i) $o.="<td>".$c[$i]."</td>";
-		else $o.="<td></td>";
-		$o.="</tr>";
+	if(sizeof($b)>sizeof($c)) $l=sizeof($b);
+	else $l=sizeof($c);
+	$e="";
+	$r="";
+	for($i=0;$i<$l;$i++){
+		$e.=$b[$i]."<br>";
+		$r.=$c[$i]."<br>";
 	}
-	$o.="</table>";
-	echo $o;
+	echo "<div class=left><h4>books</h4>$e</div><div class=right ><h4>music</h4>$r</div></div>";
 }
 ?>

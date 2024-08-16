@@ -22,7 +22,7 @@ include "com.php";
 <main>
 
 	<h1>
-		<a href=rss.xml><img class=rss src=img/rss.png  /></a>
+		<a href=rss.xml ><img class=rss src=img/rss.png  /></a>
 		blog
 	</h1>
 	<p>Professional blog of lasermtv. <a href=login.php >Log in</a> to administration.</p>
@@ -54,7 +54,7 @@ foreach(array_reverse($n) as $i){
 			$y=date("y",$t+7200);
 		}
 		echo "> <b><a href=posts/$o >";
-		echo"$i</a></b> - <i>".date("d/m/Y h:m",$t+7200)." (CEST)</i><br>";
+		echo"$i</a></b> - <i>".date("d/m/Y H:m",$t+7200)." (CEST)</i><br>";
 	}
 }
 ?>

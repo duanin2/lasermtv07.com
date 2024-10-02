@@ -7,19 +7,19 @@
 	<language>en-us</language>
 	<item>
 		<title>nya :3</title>
-		<link>http://localhost:8000/posts/1720273435-nya-:3.html</link>
+		<link>http://127.0.0.1:8080/posts/1720273435-nya-:3.html</link>
 		<description>A post about nya :3</description>
 		<pubDate>06/07/2024 15:07</pubDate>
 	</item>
 	<item>
 		<title>Writing a website in under 24 hours!</title>
-		<link>http://localhost:8000/posts/1720315351-Writing-a-website-in-under-24-hours!.html</link>
+		<link>http://127.0.0.1:8080/posts/1720315351-Writing-a-website-in-under-24-hours!.html</link>
 		<description>A post about Writing a website in under 24 hours!</description>
 		<pubDate>07/07/2024 03:07</pubDate>
 	</item>
 	<item>
 		<title>uwu</title>
-		<link>http://localhost:8000/posts/1723832092-uwu.html</link>
+		<link>http://127.0.0.1:8080/posts/1723832092-uwu.html</link>
 		<description>A post about uwu</description>
 		<pubDate>16/08/2024 20:08</pubDate>
 	</item>

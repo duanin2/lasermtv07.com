@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -20,14 +24,13 @@
             <input type="submit" name="s">
         </form>
         <?php
-        session_start();
-        if ($_SESSION["login"]) {
+        if ($_SESSION["login"] ?? false) {
             echo "<b>Already logged in</b>";
-            header("location:admin.php");
+            header("location: admin.php");
             die();
         }
         if (isset($_POST["s"])) {
-            $loginInfo = explode(";", trim(file_get_contents("login.txt")));
+            $loginInfo = explode(";", trim(file_get_contents("./login.txt")));
             $username = $loginInfo[0];
             $password = $loginInfo[1];
             if ($username == $_POST["login"] && password_verify($_POST["pass"], $password)) {

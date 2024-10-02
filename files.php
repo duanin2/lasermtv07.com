@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -43,7 +46,7 @@
         <hr />
         <h2>Manage files</h2>
         <?php
-        if ($_GET["del"]) {
+        if ($_GET["del"] ?? false) {
             if (file_exists("files/" . $_GET["del"])) unlink("files/" . $_GET["del"]);
             header("location: files.php");
         }

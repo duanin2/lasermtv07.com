@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -17,7 +20,7 @@
     $unique = true;
     $articleName = -1;
     foreach ($articles as $name => $content) {
-        if ($content["i"] == $_GET["i"]) {
+        if ($content["i"] ?? "" == $_GET["i"] ?? "") {
             $unique = false;
             $articleName = $name;
         }
@@ -33,9 +36,12 @@
                 <?php if (!$unique) echo $articles[$articleName]["a"]; ?>
             </textarea>
             <br><input type=submit name=s>
-            <a href="preview.php?i=<?php echo $_GET["i"]; ?>" target="_new">
-                Preview
-            </a>
+            <?php
+                if (isset($_GET["i"])) {
+                    $i = $_GET["i"];
+                    echo "<a href=\"preview.php?i=$i\" target=\"_new\">Preview</a>";
+                }
+            ?>
         </form>
         <?php
         if (isset($_POST["s"])) {

@@ -7,9 +7,9 @@ function footer() {
 }
 function printInterests() {
     echo "<div class=\"int\">";
-    $interests = explode(";", explode("|", file_get_contents("interests.txt"));
-    $books = $interests[0];
-    $music = $interests[1];
+    $interests = explode("|", file_get_contents("interests.txt"));
+    $books = explode(";", $interests[0]);
+    $music = explode(";", $interests[1]);
     $length = max(sizeof($books), sizeof($music));
     $bookStr = "";
     $musicStr = "";

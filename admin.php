@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include "rss.php";
 function name2filename($name) {
     $output = "";
@@ -34,7 +35,7 @@ function name2filename($name) {
         <h1>admin panel</h1>
         <?php
         session_start();
-        if ($_GET["d"] == "true") {
+        if ($_GET["d"] ?? "" == "true") {
             unset($_SESSION["login"]);
         }
         if (!isset($_SESSION["login"])) {
@@ -48,7 +49,7 @@ function name2filename($name) {
         <hr />
         <?php
         $articles = unserialize(file_get_contents("articles.txt"));
-        if ($_GET["gen"] == "true") {
+        if ($_GET["gen"] ?? "" == "true") {
             // deletes directory content
             foreach (scandir("posts") as $value) {
                 unlink("posts/" . $value);

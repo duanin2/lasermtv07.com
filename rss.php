@@ -1,7 +1,6 @@
-
 <?php
-function genRSS(){
-$o=<<<EOF
+function genRSS() {
+    $output = <<<EOF
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
@@ -10,26 +9,25 @@ $o=<<<EOF
 	<description>A blog of a Czech teenager</description>
 	<language>en-us</language>
 EOF;
-foreach(scandir('posts') as $i){
-	if($i!=="." && $i!=".."){
-		$o.= "\n	<item>";
-		$l=$i;
-		$t=explode("-",$i);
-		array_shift($t);
-		$i=implode(" ",$t);
-		$i=preg_replace("/\..*$/","",$i);
-		$o.= "\n		<title>$i</title>\n";
+    foreach (scandir('posts') as $post) {
+        if ($post !== "." && $post != "..") {
+            $output .= "\n	<item>";
+            $link = $post;
+            $temp = explode("-", $post);
+            array_shift($temp);
+            $post = implode(" ", $temp);
+            $post = preg_replace("/\..*$/", "", $post);
+            $output .= "\n		<title>$post</title>\n";
 
-		$o.= "		<link>http://".$_SERVER["HTTP_HOST"]."/posts/$l</link>";
-		$o.= "\n		<description>A post about $i</description>";
+            $output .= "		<link>http://" . $_SERVER["HTTP_HOST"] . "/posts/$link</link>";
+            $output .= "\n		<description>A post about $post</description>";
 
-		$o.= "\n		<pubDate>";
-		$o.= date("d/m/Y H:m",explode("-",$l)[0]+7200);
-		$o.= "</pubDate>";
-		$o.= "\n	</item>";
-	}
+            $output .= "\n		<pubDate>";
+            $output .= date("d/m/Y H:m", explode("-", $link)[0] + 7200);
+            $output .= "</pubDate>";
+            $output .= "\n	</item>";
+        }
+    }
+    $output .= "\n</channel>\n</rss>";
+    file_put_contents("rss.xml", $output);
 }
-$o.= "\n</channel>\n</rss>";
-file_put_contents("rss.xml",$o);
-}
-?>
